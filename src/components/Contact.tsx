@@ -73,7 +73,7 @@ export default function Contact() {
           <p className="text-xs text-muted-foreground" aria-live="polite">
             {status === "success" && "✓ Message sent. Talk soon!"}
             {status === "error" && "Something went wrong. Try again."}
-            {status === "idle" && "Powered by Formspree."}
+            {status === "idle" && "Send a note and your email app will open with a draft."}
             {status === "loading" && "Sending…"}
           </p>
           <button

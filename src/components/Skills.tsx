@@ -1,4 +1,4 @@
-import { skills } from "@/data/config";
+import { skills, skillAreas } from "@/data/config";
 import SectionHeading from "./SectionHeading";
 
 export default function Skills() {
@@ -13,6 +13,14 @@ export default function Skills() {
           >
             <Icon className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             <span className="text-sm font-medium">{name}</span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {skillAreas.map((area) => (
+          <div key={area.name} className="reveal space-y-2">
+            <h3 className="text-sm font-semibold">{area.name}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{area.details}</p>
           </div>
         ))}
       </div>

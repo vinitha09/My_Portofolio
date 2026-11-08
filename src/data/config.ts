@@ -1,93 +1,137 @@
 import {
-  SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact,
-  SiTailwindcss, SiGit, SiNodedotjs, SiVite, SiFigma,
+  SiDocker, SiGit, SiGithub, SiGooglecloud, SiHibernate, SiJava,
+  SiMongodb, SiOpenjdk, SiPostgresql, SiPython, SiSpring, SiSqlite,
 } from "react-icons/si";
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import type { IconType } from "react-icons";
 
-/**
- * Edit this file to personalize the template.
- * No other files need to change for basic content updates.
- */
-
 export const site = {
-  name: "Your Name",
-  role: "Frontend Developer",
-  bio: "I craft minimal, accessible interfaces with a focus on performance and detail. Currently building things on the web with React & TypeScript.",
-  email: "hello@example.com",
-  location: "Earth",
+  name: "Pothula Vinitha",
+  role: "Software Engineer | AI & Machine Learning",
+  bio: "Software engineer building backend services and AI applications, with experience in Java, cloud platforms, and machine learning. Currently pursuing a Master's in Artificial Intelligence at BTU Cottbus-Senftenberg.",
+  email: "pothulavinitha09@gmail.com",
+  phone: "+49 15510711220",
+  location: "Cottbus, Germany",
   cvUrl: "/cv.pdf",
-  // Replace with your Formspree endpoint: https://formspree.io
-  formspreeEndpoint: "https://formspree.io/f/your-id",
+  formspreeEndpoint: "",
 };
 
 export const about = {
   paragraphs: [
-    "Hi, I'm a frontend developer who enjoys building clean, fast and accessible products. I care about typography, micro-interactions, and the small details that make software feel right.",
-    "When I'm not coding, you'll find me reading design essays, taking long walks, or experimenting with side projects. I'm currently open to freelance and full-time opportunities.",
+    "I am a software engineer with experience building backend services and improving business workflows. At Aurum Data Solutions, I developed CRUD APIs, worked through API, authentication, SSL/TLS, and cloud connectivity issues with SRE teams, and helped automate workflows that reduced manual effort by 30%.",
+    "I previously worked at Accenture as an Associate Software Engineer, using Java, Spring, Hibernate, and front-end technologies. I hold a Bachelor's degree in Artificial Intelligence and Data Science from KL University and am pursuing a Master's in Artificial Intelligence at Brandenburg University of Technology Cottbus-Senftenberg.",
   ],
 };
+
+export type Experience = {
+  company: string;
+  role: string;
+  location: string;
+  period: string;
+  highlights: string[];
+};
+
+export const experience: Experience[] = [
+  {
+    company: "Aurum Data Solutions",
+    role: "Software Engineer I",
+    location: "Hyderabad, India",
+    period: "Apr 2025 – Sep 2026",
+    highlights: [
+      "Developed CRUD APIs for internal and external service integration.",
+      "Collaborated with SRE and cross-functional teams to resolve API, authentication, SSL/TLS, and cloud connectivity issues.",
+      "Improved and automated workflows, reducing manual effort by 30%.",
+    ],
+  },
+  {
+    company: "Accenture",
+    role: "Associate Software Engineer",
+    location: "Hyderabad, India",
+    period: "Aug 2024 – Jan 2025",
+    highlights: [
+      "Worked with Java, Spring, Hibernate, HTML, CSS, and JavaScript.",
+      "Built software engineering, problem-solving, and teamwork experience in a cross-functional environment.",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "Master's in Artificial Intelligence",
+    institution: "Brandenburg University of Technology Cottbus-Senftenberg (BTU)",
+    location: "Cottbus, Germany",
+    period: "Oct 2026 – Present",
+  },
+  {
+    degree: "Bachelor's in Artificial Intelligence and Data Science",
+    institution: "KL University",
+    location: "Vijayawada, India",
+    period: "Nov 2020 – May 2024",
+  },
+];
 
 export type Project = {
   title: string;
   description: string;
   tags: string[];
   image: string;
-  demo: string;
-  github: string;
+  period: string;
+  github?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Project One",
-    description: "A short description of what this project does and the problem it solves.",
-    tags: ["React", "TypeScript", "Tailwind"],
+    title: "Industrial AI Maintenance Assistant",
+    description: "An AI assistant concept for industrial troubleshooting that draws on technical manuals, daily logs, and historical repair records, with structured storage for incidents, procedures, and outcomes.",
+    tags: ["Generative AI", "RAG", "LLM APIs", "MCP"],
     image: "/placeholder.svg",
-    demo: "https://example.com",
-    github: "https://github.com/your-username/project-one",
+    period: "Oct 2026 – Present",
   },
   {
-    title: "Project Two",
-    description: "Another project highlighting your craft, with a focus on UX and performance.",
-    tags: ["Next.js", "Node", "Postgres"],
+    title: "Facial Web Authentication System",
+    description: "A web-based facial authentication project using image augmentation to improve model generalization, with user and authentication data management.",
+    tags: ["Python", "Machine Learning", "Computer Vision", "Web"],
     image: "/placeholder.svg",
-    demo: "https://example.com",
-    github: "https://github.com/your-username/project-two",
-  },
-  {
-    title: "Project Three",
-    description: "An open source library or tool you've built or contributed to.",
-    tags: ["Vite", "Library", "DX"],
-    image: "/placeholder.svg",
-    demo: "https://example.com",
-    github: "https://github.com/your-username/project-three",
+    period: "Dec 2023 – Mar 2024",
+    github: "https://github.com/vinitha09/web_authentication",
   },
 ];
 
 export type Skill = { name: string; Icon: IconType };
 
 export const skills: Skill[] = [
-  { name: "HTML5", Icon: SiHtml5 },
-  { name: "CSS3", Icon: SiCss },
-  { name: "JavaScript", Icon: SiJavascript },
-  { name: "TypeScript", Icon: SiTypescript },
-  { name: "React", Icon: SiReact },
-  { name: "Tailwind", Icon: SiTailwindcss },
-  { name: "Node.js", Icon: SiNodedotjs },
-  { name: "Vite", Icon: SiVite },
-  { name: "Git", Icon: SiGit },
-  { name: "Figma", Icon: SiFigma },
+  { name: "Java", Icon: SiOpenjdk },
+  { name: "Python", Icon: SiPython },
+  { name: "SQL", Icon: SiPostgresql },
+  { name: "Spring", Icon: SiSpring },
+  { name: "Hibernate", Icon: SiHibernate },
+  { name: "MongoDB", Icon: SiMongodb },
+  { name: "PostgreSQL", Icon: SiPostgresql },
+  { name: "SQLite", Icon: SiSqlite },
+  { name: "Google Cloud", Icon: SiGooglecloud },
+  { name: "Docker", Icon: SiDocker },
+  { name: "Git & GitHub", Icon: SiGithub },
+  { name: "GitLab", Icon: SiGit },
+];
+
+export const skillAreas = [
+  { name: "Backend development", details: "APIs, microservices, monolithic systems" },
+  { name: "Cloud & DevOps", details: "Google Cloud Run, Cloud Storage, Pub/Sub, Secret Manager, CI/CD, Docker" },
+  { name: "Databases", details: "MongoDB, PostgreSQL, SQLite, DB2" },
+  { name: "AI & machine learning", details: "LLM APIs, RAG, generative AI, deep learning, CNNs, computer vision" },
+  { name: "Tools & practices", details: "Git, GitHub, GitLab, Azure DevOps, Agile, Atlassian Confluence, Model Context Protocol (MCP)" },
 ];
 
 export const socials = [
-  { name: "GitHub", href: "https://github.com/your-username", Icon: FiGithub },
-  { name: "LinkedIn", href: "https://linkedin.com/in/your-username", Icon: FiLinkedin },
-  { name: "Twitter", href: "https://twitter.com/your-username", Icon: FiTwitter },
-  { name: "Email", href: "mailto:hello@example.com", Icon: FiMail },
+  { name: "GitHub", href: "https://github.com/vinitha09", Icon: FiGithub },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/pothula-vinitha-reddy-b95127209/", Icon: FiLinkedin },
+  { name: "Email", href: `mailto:${site.email}`, Icon: FiMail },
 ];
 
 export const nav = [
   { label: "Work", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },

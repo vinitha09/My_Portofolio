@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -16,6 +18,10 @@ const Index = () => {
         <Hero />
         <div className="hairline" />
         <Projects />
+        <div className="hairline" />
+        <Experience />
+        <div className="hairline" />
+        <Education />
         <div className="hairline" />
         <Skills />
         <div className="hairline" />

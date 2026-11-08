@@ -26,6 +26,7 @@ export default function Projects() {
             </div>
             <div className="flex flex-col flex-1 p-5">
               <h3 className="font-display text-lg font-semibold mb-2">{p.title}</h3>
+              <p className="text-xs text-muted-foreground mb-3">{p.period}</p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                 {p.description}
               </p>
@@ -39,24 +40,18 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="flex items-center gap-4 text-sm">
-                <a
-                  href={p.demo}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1 hover:text-muted-foreground transition-colors"
-                >
-                  Live <ArrowUpRight className="h-3.5 w-3.5" />
-                </a>
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github className="h-3.5 w-3.5" /> Code
-                </a>
-              </div>
+              {p.github && (
+                <div className="flex items-center gap-4 text-sm">
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="h-3.5 w-3.5" /> View code <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              )}
             </div>
           </article>
         ))}

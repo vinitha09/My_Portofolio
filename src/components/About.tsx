@@ -25,6 +25,14 @@ export default function About() {
             </dd>
           </div>
           <div>
+            <dt className="text-muted-foreground">Phone</dt>
+            <dd className="font-medium">
+              <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="hover:underline underline-offset-4">
+                {site.phone}
+              </a>
+            </dd>
+          </div>
+          <div>
             <dt className="text-muted-foreground">Status</dt>
             <dd className="font-medium">Open to opportunities</dd>
           </div>
